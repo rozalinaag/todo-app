@@ -1,14 +1,25 @@
+
 .list {
-    .all-tasks{
-        margin-bottom: 30px;
+    &__all-tasks{
+        margin-top: -80px;
+        
     }
+    &__add-button{
+            opacity: 0.4;
     
+        &:hover{
+            opacity: 1;
+        }
+    }
+    margin-top: 30px;
+
     li {
         display: flex;
         align-items: center;
         padding: 10px 12px;
         cursor: pointer;
         margin-bottom: 3px;
+        font-size: 14px;
 
         &.active {
             background: #ffffff;
@@ -31,28 +42,5 @@
             margin-bottom: 2px;
         }
 
-        .badge{
-            width: 10px;
-            height: 10px;
-            border-radius: 30px;
-            position: relative;
-            left: 5px;
-
-            &--green{
-                background-color: #42B883;
-            }
-            &--blue{
-                background-color: #64C4ED;
-            }
-            &--pink{
-                background-color: #FFBBCC;
-            }
-            &--light-green{
-                background-color: #B6E6BD;
-            }
-            &--gray{
-                background-color: #C9D1D3;
-            }
-        }
     }
 }

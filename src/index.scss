@@ -6,6 +6,13 @@
   font-family: "Roboto", -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
 }
 
 .todo {
@@ -23,9 +30,39 @@
   &__sidebar {
     background-color: #f4f6f8;
     width: 200px;
-    height: 100%;
+    height: calc(100% - 120px);
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
   }
 
+}
+
+.field {
+
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &:focus{
+    border-color: rgb(153, 153, 153);
+    color: rgb(218, 206, 206);
+  }
+}
+.button {
+  background: #4DD599;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover{
+    background: darken(#4DD599, 10%);
+  }
+  &:active{
+    background: darken(#4DD599, 15%);
+  }
 }

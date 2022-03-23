@@ -1,0 +1,50 @@
+.add-list {
+    &__popup {
+        height: 148px;
+        width: 240px;
+        font-size: 16px;
+        padding: 18px;
+        background: #ffffff;
+        box-shadow: 0px 6px 10px rgba(145, 122, 122, 0.05);
+        border-radius: 10px;
+        box-sizing: border-box;
+        position: relative;
+        
+        &-colors{
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid transparent;
+
+            .badge{
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+
+                &:hover{
+                    border: 2px solid rgb(107, 105, 105);
+                }
+                &:focus{
+                    border: 2px solid rgb(107, 105, 105);
+                }
+                
+                &:active{
+                    border: 2px solid black;
+                }
+            }
+        }
+
+        .button{
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        &-close-btn{
+            position: absolute;
+            right: -8px;
+            top: -8px;
+            cursor: pointer;
+        }
+      
+    }
+}

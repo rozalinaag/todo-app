@@ -1,12 +1,18 @@
 import React from 'react';
 import List from './components/List/index';
+import AddList from './components/AddList';
+
+import DB from './assets/db.json';
 
 function App() {
+  
   return (
     <div className="todo">
       <div className='todo__sidebar'>
-        <List items={[
+      <List 
+      items = {[
           {
+            className: 'list__all-tasks',
             icon: (<svg
               width="18"
               height="18"
@@ -20,8 +26,10 @@ function App() {
               />
             </svg>),
             name: "All tasks", 
-            active: true
           },
+        ]}/>
+        <List items={[
+          
           {
             color: 'green',
             name: "Покупки",
@@ -36,14 +44,17 @@ function App() {
             name: "Фильмы и сериаls"
           },
           {
-            color: 'light-green',
+            color: 'lime',
             name: "Книги"
           },
           {
-            color: 'gray',
+            color: 'grey',
             name: "Личное"
           },
-        ]}/>
+        ]}
+        isRemovable= {true}
+        />
+        <AddList colors={DB.colors}/>
       </div>
       <div className='todo__tasks'>
 
