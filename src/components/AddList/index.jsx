@@ -4,15 +4,27 @@ import Badge from '../Badge'
 import "./AddButtonList.scss";
 import closeSvg from '../../assets/img/close.svg'
 
-const AddList = ({colors}) => {
+const AddList = ({ colors, onAdd }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [selectedColor, setSelectedColor] = useState(colors[0].id);
+  const [inputValue, setInputValue] = useState('');
+
+  const addList = () => {
+    
+    if(!inputValue){
+      alert("Enter list's name");
+      return;
+    }
+
+    const color = colors.filter(c => c.id === selectedColor)[0].name;
+    onAdd({id: Math.random(), name: inputValue, color});
+  };
   
 
   return (
     <div className="add-list">
       <List
-      onClick={()=> setVisiblePopup(!visiblePopup)}
+        onClick={() => setVisiblePopup(!visiblePopup)}
         items={[
           {
             className: "list__add-button",
@@ -45,25 +57,33 @@ const AddList = ({colors}) => {
         ]}
       />
       {visiblePopup && (
-      <div className="add-list__popup">
-        <img
-        onClick={() => setVisiblePopup(false)} 
-        src={closeSvg} alt="" className="add-list__popup-close-btn" />
-        <input className="field" type="text" placeholder="Название папки"></input>
-        <div className="add-list__popup-colors">
-          {
-            colors.map(color => (
-              <Badge onClick={() => setSelectedColor(color.id)}
-              key={color.id}
-                color={color.name}
-                className={selectedColor === color.id && 'active' }
+        <div className="add-list__popup">
+          <img
+            onClick={() => setVisiblePopup(false)}
+            src={closeSvg} alt="" className="add-list__popup-close-btn" />
+
+
+          <input value={inputValue}
+            onChange={e => setInputValue(e.target.value)}
+            className="field"
+            type="text"
+            placeholder="Название списка">
+          </input>
+
+          <div className="add-list__popup-colors">
+            {
+              colors.map(color => (
+                <Badge onClick={() => setSelectedColor(color.id)}
+                  key={color.id}
+                  color={color.name}
+                  className={selectedColor === color.id && 'active'}
                 />
-            )
               )
-          }
-        </div>  
-        <button className="button">Добавить</button>
-      </div>
+              )
+            }
+          </div>
+          <button onClick={addList} className="button">Добавить</button>
+        </div>
       )}
     </div>
   );
