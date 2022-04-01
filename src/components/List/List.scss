@@ -1,7 +1,8 @@
 
 .list {
+    $self: &;
     &__all-tasks{
-        margin-top: -80px;
+        margin-top: -30px;
         
     }
     &__add-button{
@@ -11,7 +12,12 @@
             opacity: 1;
         }
     }
-    margin-top: 30px;
+    margin-top: 20px;
+
+
+    span{
+        flex:1;
+    }
 
     li {
         display: flex;
@@ -20,6 +26,21 @@
         cursor: pointer;
         margin-bottom: 3px;
         font-size: 14px;
+        transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+
+        &:hover #{$self}__remove-icon{
+            opacity: 0.2;
+        }
+
+        
+        #{$self}__remove-icon{
+            opacity: 0;
+            transition: opacity 0.15s ease-in-out;
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
 
         &:hover{
             background: rgba(255,255,255,0.9)

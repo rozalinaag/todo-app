@@ -16,6 +16,7 @@
 }
 
 .todo {
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -35,6 +36,11 @@
     padding: 60px 20px;
   }
 
+  &__tasks{
+    flex: 1;
+    padding: 60px;
+  }
+
 }
 
 .field {
@@ -51,6 +57,8 @@
     color: rgb(218, 206, 206);
   }
 }
+
+
 .button {
   background: #4DD599;
   border-radius: 4px;
