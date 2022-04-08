@@ -43,20 +43,6 @@
 
 }
 
-.field {
-
-  background: #FFFFFF;
-  border: 1px solid #EFEFEF;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 8px 12px;
-  width: 100%;
-
-  &:focus{
-    border-color: rgb(153, 153, 153);
-    color: rgb(218, 206, 206);
-  }
-}
 
 
 .button {
@@ -66,11 +52,45 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 14px;
+
 
   &:hover{
     background: darken(#4DD599, 10%);
   }
   &:active{
     background: darken(#4DD599, 15%);
+  }
+  
+  &:disabled {
+    background: #d8d8d8;
+  }
+
+  &--grey{
+    background: #F4F6F8;
+    color: #444444;
+
+    &:hover{
+      background: darken(#F4F6F8, 4%);
+    }
+    &:active{
+      background: darken(#F4F6F8, 7%);
+    }
+  }
+}
+
+.field {
+
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  font-size: 14px;
+
+  &:focus{
+    border-color: rgb(153, 153, 153);
+    color: rgb(218, 206, 206);
   }
 }
