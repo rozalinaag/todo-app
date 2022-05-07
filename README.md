@@ -1,6 +1,9 @@
 ## Приложение TODO List на ReactJs
 
-![Снимок](https://user-images.githubusercontent.com/59352861/161750159-0604efb0-d629-41e3-b5ad-cdf4582c1b49.JPG)
+![Снимок](https://user-images.githubusercontent.com/59352861/167269264-49b4efec-6a3b-4e7d-be06-d6c7735037a2.PNG)
+
+![2](https://user-images.githubusercontent.com/59352861/167269268-1e28d523-1d01-4953-bcb9-08d0ff101e26.PNG)
+
 
 # Getting Started with Create React App
 
