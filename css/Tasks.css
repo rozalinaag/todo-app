@@ -1,0 +1,150 @@
+.tasks__title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #64c4ed;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.tasks__title:hover img {
+  opacity: 0.2;
+}
+
+.tasks .img-edit {
+  opacity: 0;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.tasks .img-edit:hover {
+  opacity: 0.8;
+}
+
+.tasks__form {
+  margin-top: 20px;
+}
+
+.tasks__form-block .button {
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.tasks__form-new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.tasks__form-new:hover {
+  opacity: 0.8;
+}
+
+.tasks__form-new img {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}
+
+.tasks__form-new span {
+  font-size: 16px;
+  margin-left: 19px;
+}
+
+.tasks__items {
+  margin-top: 30px;
+}
+
+.tasks__items h2 {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 24px;
+  color: #c9d1d3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.tasks__items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.tasks__items-row p {
+  margin-left: 15px;
+}
+
+.tasks .checkbox input {
+  display: none;
+}
+
+.tasks .checkbox svg {
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.tasks .checkbox svg path {
+  stroke: #f2f2f2;
+}
+
+.tasks .checkbox input:checked + label {
+  background-color: #4DD599;
+  border-color: #4DD599;
+}
+
+.tasks .checkbox input:checked + label svg {
+  opacity: 1;
+}
+
+.tasks .checkbox input:checked + label svg path {
+  stroke: #ffffff;
+}
+
+.tasks .checkbox:hover label {
+  background-color: #f2f2f2;
+  border-color: #f2f2f2;
+}
+
+.tasks .checkbox:hover label svg {
+  opacity: 1;
+}
+
+.tasks .checkbox:hover label svg path {
+  stroke: #B3B3B3;
+}
+
+.tasks .checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #cecece;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.tasks .checkbox label svg {
+  opacity: 0;
+}

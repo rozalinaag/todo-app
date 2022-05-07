@@ -6,9 +6,18 @@
   font-family: "Roboto", -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.15px;
 }
 
 .todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -26,7 +35,65 @@
 .todo__sidebar {
   background-color: #f4f6f8;
   width: 200px;
-  height: 100%;
+  height: calc(100% - 120px);
   border-right: 1px solid #f1f1f1;
   padding: 60px 20px;
+}
+
+.todo__tasks {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 60px;
+}
+
+.button {
+  background: #4DD599;
+  border-radius: 4px;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button:hover {
+  background: #2ec180;
+}
+
+.button:active {
+  background: #29ad73;
+}
+
+.button:disabled {
+  background: #d8d8d8;
+}
+
+.button--grey {
+  background: #F4F6F8;
+  color: #444444;
+}
+
+.button--grey:hover {
+  background: #e8ecf0;
+}
+
+.button--grey:active {
+  background: #dee4ea;
+}
+
+.field {
+  background: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.field:focus {
+  border-color: #999999;
+  color: #dacece;
 }
